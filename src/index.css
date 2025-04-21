@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -30,11 +30,22 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter antialiased;
+    @apply bg-background text-foreground font-poppins antialiased;
+    scroll-behavior: smooth;
+  }
+  
+  /* Glass morphism utilities */
+  .glass {
+    @apply backdrop-blur-lg bg-white/10 border border-white/20 shadow-lg;
+  }
+  
+  .glass-dark {
+    @apply backdrop-blur-lg bg-black/10 border border-white/10 shadow-lg;
   }
 }
 
 @layer utilities {
+  /* Animations */
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in;
   }
@@ -49,4 +60,23 @@
       transform: translateY(0);
     }
   }
+  
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent;
+  }
+  
+  /* Hover effects */
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+}
+
+/* GSAP-specific styles */
+.gsap-reveal {
+  visibility: hidden;
 }
