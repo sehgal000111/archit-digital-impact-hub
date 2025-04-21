@@ -48,30 +48,40 @@ export const ProjectShowcase = () => {
     const title = titleRef.current;
     const cards = cardsRef.current;
     
-    gsap.from(title, {
-      scrollTrigger: {
-        trigger: title,
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out"
-    });
-    
-    gsap.from(cards?.children, {
-      scrollTrigger: {
-        trigger: cards,
-        start: "top 75%",
-        toggleActions: "play none none none"
-      },
-      y: 60,
-      opacity: 0,
-      stagger: 0.2,
-      duration: 0.8,
-      ease: "power3.out"
-    });
+    if (title && cards) {
+      gsap.fromTo(title, 
+        { y: 40, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: title,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out"
+        }
+      );
+      
+      if (cards.children.length > 0) {
+        gsap.fromTo(Array.from(cards.children), 
+          { y: 60, opacity: 0 },
+          {
+            scrollTrigger: {
+              trigger: cards,
+              start: "top 75%",
+              toggleActions: "play none none none"
+            },
+            y: 0,
+            opacity: 1,
+            stagger: 0.2,
+            duration: 0.8,
+            ease: "power3.out"
+          }
+        );
+      }
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach(st => st.kill());

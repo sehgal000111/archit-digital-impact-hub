@@ -30,30 +30,40 @@ export const CoreCompetencies = () => {
     const title = titleRef.current;
     const skills = skillsRef.current;
     
-    gsap.from(title, {
-      scrollTrigger: {
-        trigger: title,
-        start: "top 80%",
-        toggleActions: "play none none none"
-      },
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out"
-    });
-    
-    gsap.from(skills?.childNodes, {
-      scrollTrigger: {
-        trigger: skills,
-        start: "top 75%",
-        toggleActions: "play none none none"
-      },
-      y: 20,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.6,
-      ease: "power3.out"
-    });
+    if (title && skills) {
+      gsap.fromTo(title,
+        { y: 40, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: title,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out"
+        }
+      );
+      
+      if (skills.childNodes.length > 0) {
+        gsap.fromTo(Array.from(skills.childNodes),
+          { y: 20, opacity: 0 },
+          {
+            scrollTrigger: {
+              trigger: skills,
+              start: "top 75%",
+              toggleActions: "play none none none"
+            },
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            duration: 0.6,
+            ease: "power3.out"
+          }
+        );
+      }
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach(st => st.kill());
