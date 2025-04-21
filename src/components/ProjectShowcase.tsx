@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -91,68 +90,66 @@ export const ProjectShowcase = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-20 px-4 relative"
+      className="py-24 px-4 relative"
       id="projects"
     >
-      {/* Background elements */}
+      {/* Enhanced background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-40 right-0 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-40 w-80 h-80 bg-purple-400/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-40 right-0 w-[32rem] h-[32rem] bg-secondary/10 rounded-full filter blur-[100px] animate-pulse-slow"></div>
+        <div className="absolute bottom-0 left-40 w-[28rem] h-[28rem] bg-purple-400/10 rounded-full filter blur-[100px] animate-pulse-slow"></div>
       </div>
       
       <div className="max-w-6xl mx-auto">
         <h2 
           ref={titleRef}
-          className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent"
+          className="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent"
         >
           Featured Projects
         </h2>
         
         <div 
           ref={cardsRef}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <Card 
               key={project.title}
-              className="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 h-full"
+              className="backdrop-blur-md bg-white/10 border border-white/20 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-500 h-full hover:shadow-2xl"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <span className="text-white font-semibold px-3 py-1 rounded-full bg-secondary/80 backdrop-blur-sm">
+                  <span className="text-white font-semibold px-4 py-2 rounded-full bg-secondary/80 backdrop-blur-sm">
                     {project.year}
                   </span>
                 </div>
               </div>
               
               <CardHeader className="pb-2">
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">{project.description}</CardDescription>
+                <CardTitle className="text-2xl">{project.title}</CardTitle>
+                <CardDescription className="text-lg text-muted-foreground">{project.description}</CardDescription>
               </CardHeader>
               
               <CardContent className="pb-2">
                 <div className="border-t border-white/10 pt-4 mt-2">
-                  <p className="font-medium">Result:</p>
-                  <p className="text-secondary">{project.result}</p>
+                  <p className="font-medium text-lg mb-2">Result:</p>
+                  <p className="text-secondary text-lg">{project.result}</p>
                 </div>
               </CardContent>
               
               <CardFooter>
-                <div className="w-full">
-                  <Button
-                    variant="ghost"
-                    className="w-full justify-start pl-0 hover:bg-white/10 hover:pl-2 transition-all"
-                  >
-                    View Details
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-start pl-0 hover:bg-white/10 hover:pl-2 transition-all text-lg"
+                >
+                  View Details
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </CardFooter>
             </Card>
           ))}

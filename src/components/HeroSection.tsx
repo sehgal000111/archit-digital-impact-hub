@@ -50,25 +50,25 @@ export const HeroSection = () => {
       className="relative min-h-[100vh] flex items-center pt-20 overflow-hidden"
       id="about"
     >
-      {/* Background decoration */}
+      {/* Background decoration with enhanced blur effect */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute top-40 left-20 w-72 h-72 bg-secondary/30 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-96 h-96 bg-purple-400/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-40 left-20 w-96 h-96 bg-secondary/30 rounded-full filter blur-[120px] animate-pulse-slow"></div>
+        <div className="absolute bottom-40 right-20 w-[30rem] h-[30rem] bg-purple-400/20 rounded-full filter blur-[120px] animate-pulse-slow"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
         <div className="order-2 md:order-1">
           <h1 
             ref={titleRef}
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
           >
-            <span className="block">Digital Marketing</span>
+            <span className="block font-light">Digital Marketing</span>
             <span className="bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent">Specialist</span>
           </h1>
           
           <p 
             ref={subtitleRef}
-            className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-8 leading-relaxed"
+            className="text-xl md:text-2xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
           >
             Creating impactful digital campaigns with proven results across political, real estate, and local business sectors.
           </p>
@@ -101,16 +101,16 @@ export const HeroSection = () => {
           className="order-1 md:order-2 max-w-md mx-auto"
         >
           <div className="relative">
-            <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-secondary/20 to-purple-400/20 rounded-3xl blur-md"></div>
-            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-6 shadow-xl">
+            <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-secondary/30 to-purple-400/30 rounded-3xl blur-2xl"></div>
+            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 shadow-xl transform hover:scale-[1.02] transition-all duration-500">
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000" 
                 alt="Digital Marketing Specialist"
                 className="rounded-2xl w-full h-auto object-cover shadow-lg"
               />
-              <div className="mt-6 p-4 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl">
-                <h3 className="font-bold text-xl mb-2">Archit Sehgal</h3>
-                <p className="text-muted-foreground">Driving results through strategic digital campaigns and data-driven marketing solutions.</p>
+              <div className="mt-8 p-6 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl">
+                <h3 className="font-bold text-2xl mb-3 text-gradient">Archit Sehgal</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">Driving results through strategic digital campaigns and data-driven marketing solutions.</p>
               </div>
             </div>
           </div>

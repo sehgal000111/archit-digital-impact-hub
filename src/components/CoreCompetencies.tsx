@@ -72,40 +72,40 @@ export const CoreCompetencies = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-20 px-4 relative"
+      className="py-24 px-4 relative"
       id="skills"
     >
-      {/* Background elements */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-accent/30 to-transparent"></div>
+      {/* Enhanced background elements */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-accent/40 to-transparent"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-6xl -z-10">
-        <div className="absolute top-0 right-10 w-64 h-64 bg-secondary/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-20 left-10 w-72 h-72 bg-purple-400/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 right-10 w-[28rem] h-[28rem] bg-secondary/20 rounded-full filter blur-[100px] animate-pulse-slow"></div>
+        <div className="absolute bottom-20 left-10 w-[32rem] h-[32rem] bg-purple-400/10 rounded-full filter blur-[100px] animate-pulse-slow"></div>
       </div>
       
       <div className="max-w-6xl mx-auto">
         <h2 
           ref={titleRef}
-          className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent"
+          className="text-5xl font-bold text-center mb-20 bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent"
         >
           Core Competencies
         </h2>
         
         <div 
           ref={skillsRef}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-4"
         >
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="group relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 border border-white/20 p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+              className="group relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 border border-white/20 p-8 hover:bg-white/20 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
             >
-              <div className="flex flex-col items-center gap-4">
-                <span className="text-4xl">{skill.icon}</span>
-                <h3 className="text-lg font-semibold text-center bg-gradient-to-r from-white to-white/80 bg-clip-text">
+              <div className="flex flex-col items-center gap-6">
+                <span className="text-5xl transform transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3">{skill.icon}</span>
+                <h3 className="text-xl font-semibold text-center bg-gradient-to-r from-white to-white/80 bg-clip-text">
                   {skill.name}
                 </h3>
               </div>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-secondary/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-secondary/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           ))}
         </div>
