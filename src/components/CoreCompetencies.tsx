@@ -33,17 +33,17 @@ export const CoreCompetencies = () => {
     const graph = graphRef.current;
     
     if (title && skills && graph) {
-      // Animate graph background
-      gsap.to(graph.children, {
-        y: "random(-8, 8)",
-        x: "random(-8, 8)",
-        duration: "random(2, 4)",
+      // Animate graph lines
+      gsap.to(".graph-line", {
+        y: "random(-2, 2)",
+        x: "random(-2, 2)",
+        duration: "random(3, 5)",
         repeat: -1,
         yoyo: true,
         ease: "none",
         stagger: {
-          each: 0.2,
-          grid: "auto",
+          each: 0.1,
+          grid: [20, 20],
           from: "random",
         }
       });
@@ -93,7 +93,29 @@ export const CoreCompetencies = () => {
       className="py-20 px-4 relative overflow-hidden"
       id="skills"
     >
-      {/* Background elements */}
+      {/* Graph paper background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 grid grid-cols-[repeat(40,1fr)] grid-rows-[repeat(40,1fr)]">
+          {/* Horizontal lines */}
+          {[...Array(41)].map((_, i) => (
+            <div
+              key={`h-${i}`}
+              className="graph-line col-span-full h-px bg-secondary/5"
+              style={{ gridRow: i + 1 }}
+            />
+          ))}
+          {/* Vertical lines */}
+          {[...Array(41)].map((_, i) => (
+            <div
+              key={`v-${i}`}
+              className="graph-line row-span-full w-px bg-secondary/5"
+              style={{ gridColumn: i + 1 }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Gradient overlay */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-accent/30 to-transparent"></div>
       
       <div className="max-w-6xl mx-auto relative">
@@ -104,28 +126,8 @@ export const CoreCompetencies = () => {
           Core Competencies
         </h2>
 
-        {/* Glass container with animated graph background */}
+        {/* Glass container */}
         <div className="relative glass rounded-2xl p-8 border border-white/20 backdrop-blur-lg bg-white/10">
-          {/* Animated graph background */}
-          <div 
-            ref={graphRef}
-            className="absolute inset-0 -z-10 overflow-hidden"
-          >
-            {[...Array(20)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-px h-px bg-secondary/20"
-                style={{
-                  left: `${Math.random() * 100}%`,
-                  top: `${Math.random() * 100}%`,
-                  width: `${Math.random() * 3}px`,
-                  height: `${Math.random() * 100}px`,
-                  transform: `rotate(${Math.random() * 360}deg)`,
-                }}
-              />
-            ))}
-          </div>
-          
           {/* Skills grid */}
           <div 
             ref={skillsRef}
@@ -153,3 +155,4 @@ export const CoreCompetencies = () => {
     </section>
   );
 };
+
