@@ -1,6 +1,5 @@
 
 import { useEffect, useRef } from "react";
-import { Badge } from "@/components/ui/badge";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -84,33 +83,31 @@ export const CoreCompetencies = () => {
       </div>
       
       <div className="max-w-6xl mx-auto">
-        <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8 shadow-xl">
-          <h2 
-            ref={titleRef}
-            className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent"
-          >
-            Core Competencies
-          </h2>
-          
-          <div 
-            ref={skillsRef}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {skills.map((skill) => (
-              <div
-                key={skill.name}
-                className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl p-4 transition-all hover:transform hover:scale-105 hover:bg-white/20"
-              >
-                <Badge
-                  variant="secondary"
-                  className="text-lg py-2 px-4 flex items-center gap-2 hover:bg-secondary hover:text-white transition-colors"
-                >
-                  <span>{skill.icon}</span>
+        <h2 
+          ref={titleRef}
+          className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent"
+        >
+          Core Competencies
+        </h2>
+        
+        <div 
+          ref={skillsRef}
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4"
+        >
+          {skills.map((skill) => (
+            <div
+              key={skill.name}
+              className="group relative overflow-hidden rounded-xl backdrop-blur-md bg-white/10 border border-white/20 p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            >
+              <div className="flex flex-col items-center gap-4">
+                <span className="text-4xl">{skill.icon}</span>
+                <h3 className="text-lg font-semibold text-center bg-gradient-to-r from-white to-white/80 bg-clip-text">
                   {skill.name}
-                </Badge>
+                </h3>
               </div>
-            ))}
-          </div>
+              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-secondary/10 to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
