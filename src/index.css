@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -44,24 +45,6 @@
 }
 
 @layer utilities {
-  .animate-pulse-slow {
-    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-  
-  .text-gradient {
-    @apply bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent;
-  }
-  
-  @keyframes pulse {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.7;
-      transform: scale(0.98);
-    }
-  }
   /* Animations */
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in;
@@ -76,6 +59,11 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  
+  /* Text gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-secondary to-purple-400 bg-clip-text text-transparent;
   }
   
   /* Hover effects */
