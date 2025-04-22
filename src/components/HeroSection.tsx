@@ -102,17 +102,20 @@ export const HeroSection = () => {
         >
           <div className="relative">
             <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-secondary/20 to-purple-400/20 rounded-3xl blur-md"></div>
-            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-6 shadow-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000" 
-                alt="Digital Marketing Specialist"
-                className="rounded-2xl w-full h-auto object-cover shadow-lg"
-              />
-              <div className="mt-6 p-4 backdrop-blur-md bg-white/10 border border-white/20 rounded-xl">
-                <h3 className="font-bold text-xl mb-2">Archit Sehgal</h3>
-                <p className="text-muted-foreground">Driving results through strategic digital campaigns and data-driven marketing solutions.</p>
-              </div>
-            </div>
+            <div className="max-w-sm backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-3 shadow-lg">
+  <img 
+    src="./asn.jpg" 
+    alt="Digital Marketing Specialist"
+    className="rounded-xl w-full h-auto object-cover shadow-md"
+  />
+  <div className="mt-4 p-2 backdrop-blur-md bg-white/10 border border-white/20 rounded-lg">
+    <h3 className="font-bold text-base mb-1">Archit Sehgal</h3>
+    <p className="text-sm text-muted-foreground">
+      Driving results through strategic digital campaigns and data-driven marketing solutions.
+    </p>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

@@ -8,21 +8,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
+    role: "National IT Coordinator",
+    company: "Vishwa Guru Bharat Trust",
+    period: "Nov 2024 – Present [Freelance]",
+    description: "Oversee IT operations and team coordination for smooth execution. Led digital outreach to boost donation drives.",
+  },
+  {
     role: "Digital Media Specialist",
     company: "Skymetric Consulting LLP",
-    period: "Feb 2024 – Present",
+    period: "Feb 2024 – Present [Full-Time]",
     description: "Experienced in running and optimizing ad campaigns on Facebook Ads Manager and Google Ads.",
   },
   {
-    role: "National IT Coordinator",
-    company: "Vishwa Guru Bharat Trust",
-    period: "Nov 2024 – Present",
-    description: "Oversee IT operations and team coordination for smooth execution. Led digital outreach to boost donation drives.",
+    role: "Web Developer Intern",
+    company: "Kapahi Properties",
+    period: "Apr 2023 - Jun 2023 [Internship] ",
+    description: "Developed Landing page, Property listing WebApp & supported initial ad campaigns.",
   },
   {
     role: "Digital Media Manager & Web Developer",
     company: "DigitalEditz LLP",
-    period: "Jan 2023- Present",
+    period: "Jan 2023- Present [Hybrid]",
     description: "Managed ad campaigns across sectors. Built websites aligned with digital marketing goals.",
   },
 ];

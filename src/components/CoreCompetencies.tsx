@@ -137,6 +137,7 @@ export const CoreCompetencies = () => {
               const IconComponent = skill.icon;
               return (
                 <div
+                style={{margin:"10px",backgroundColor:"rgb(245,241,240,.5)"}}
                   key={skill.name}
                   className="group flex items-center gap-4 p-4 rounded-xl backdrop-blur-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
                 >
