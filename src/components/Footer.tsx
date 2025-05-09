@@ -107,7 +107,7 @@ export const Footer = () => {
           
           <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © {new Date().getFullYear()} Archit Sehgal. All rights reserved.
+            <a href="https://medium.com/@architsehgal19" target="_blank">Read My Blogs on Medium</a> 
             </p>
             
             <p className="flex items-center gap-1 text-sm text-muted-foreground">
