@@ -14,8 +14,8 @@ const experiences = [
     description: "Oversee IT operations and team coordination for smooth execution. Led digital outreach to boost donation drives.",
   },
   {
-    role: "Digital Media Specialist",
-    company: "Skymetric Consulting LLP",
+    role: "Social Media Management",
+    company: "Converge Media",
     period: "Feb 2024 – Present [Full-Time]",
     description: "Experienced in running and optimizing ad campaigns on Facebook Ads Manager and Google Ads.",
   },
@@ -28,7 +28,7 @@ const experiences = [
   {
     role: "Digital Media Manager & Web Developer",
     company: "DigitalEditz LLP",
-    period: "Jan 2023- Present [Hybrid]",
+    period: "Apr 2023- Feb 2024 [Freelance]",
     description: "Managed ad campaigns across sectors. Built websites aligned with digital marketing goals.",
   },
 ];
