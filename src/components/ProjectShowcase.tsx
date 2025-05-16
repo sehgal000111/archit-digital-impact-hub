@@ -41,15 +41,15 @@ const projects = [
     image:
       "./districtjk.png",
   },
-  {
-    title: "NCP Maharashtra Election Campaign",
-    year: "2024",
-    description:
-      "Assisted media planning team in strategy development and execution. Coordinated content and engagement across digital platforms.",
-    result: "Improved campaign visibility and engagement in the region.",
-    image:
-      "https://static.theprint.in/wp-content/uploads/2024/08/AJIT-PAWAR-NCP.jpg",
-  },
+  // {
+  //   title: "NCP Maharashtra Election Campaign",
+  //   year: "2024",
+  //   description:
+  //     "Assisted media planning team in strategy development and execution. Coordinated content and engagement across digital platforms.",
+  //   result: "Improved campaign visibility and engagement in the region.",
+  //   image:
+  //     "https://static.theprint.in/wp-content/uploads/2024/08/AJIT-PAWAR-NCP.jpg",
+  // },
   {
     title: "Usman Majid Political Campaign",
     year: "2024",
