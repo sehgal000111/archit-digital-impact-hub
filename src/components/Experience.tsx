@@ -26,7 +26,7 @@ const experiences = [
     description: "Developed Landing page, Property listing WebApp & supported initial ad campaigns.",
   },
   {
-    role: "Digital Media Manager & Web Developer",
+    role: "Digital Media Specialist & Web Developer",
     company: "DigitalEditz LLP",
     period: "Apr 2023- Feb 2024 [Freelance]",
     description: "Managed ad campaigns across sectors. Built websites aligned with digital marketing goals.",
